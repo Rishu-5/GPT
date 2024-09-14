@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Protected Link</title>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password == "SBC@235") {
+                window.location.href = "https://chatgpt.com/g/g-QrQorWwWZ-sbc-uae-ct-tp-gpt";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>This link is password protected</h2>
+    <form onsubmit="event.preventDefault(); checkPassword();">
+        <label for="password">Enter Password:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
